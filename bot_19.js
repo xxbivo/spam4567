@@ -45,8 +45,9 @@ client.on('message', message => {
 });
 
 
-client.on("ready", () => {
-let channel =     client.channels.get("619644519259832340")
+
+client.on('message', message => {
+if (message.content === prefix+'spam') {
         let letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789".split("");
 		let spaces = " ".repeat(35);
 		let last = "";
